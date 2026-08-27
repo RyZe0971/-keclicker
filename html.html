@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed Åke</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="hero">
+      <div class="brand">
+        <span class="brand-icon">🍎</span>
+        <div>
+          <p class="eyebrow">A tiny game of kindness</p>
+          <h1>Feed Åke</h1>
+        </div>
+      </div>
+      <button id="resetButton" class="reset-button" type="button">Reset game</button>
+    </header>
+
+    <section class="dashboard">
+      <div class="stat-card">
+        <span class="stat-label">Food ready</span>
+        <strong id="foodCount">0</strong>
+        <span class="stat-hint">tasty bites</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Food per feed</span>
+        <strong id="clickPower">1</strong>
+        <span class="stat-hint">from your basket</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Auto-feeders</span>
+        <strong id="autoCount">0</strong>
+        <span class="stat-hint">helping Åke</span>
+      </div>
+    </section>
+
+    <section class="game-area">
+      <div class="feed-panel">
+        <div class="speech-bubble" id="message">Åke is hungry!</div>
+        <button id="feedButton" class="feed-button" type="button" aria-label="Feed Åke">
+          <span class="button-face">🐻</span>
+          <span class="button-label">Feed Åke</span>
+          <span class="button-subtitle">Click to share some food</span>
+        </button>
+        <div class="progress-wrap">
+          <div class="progress-heading">
+            <span>Åke's happiness</span>
+            <strong id="happinessText">0%</strong>
+          </div>
+          <div class="progress-track">
+            <div id="happinessBar" class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="upgrades-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Make feeding easier</p>
+            <h2>Upgrades</h2>
+          </div>
+          <span class="sparkle">✦</span>
+        </div>
+
+        <div id="upgradeList" class="upgrade-list"></div>
+      </aside>
+    </section>
+
+    <footer>
+      <span>Every bite makes Åke happier.</span>
+      <span id="saveStatus">Progress saves automatically</span>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
